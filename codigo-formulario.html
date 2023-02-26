@@ -10,42 +10,49 @@
     <title>Crie seu evento</title>
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page">
 
         <header>
-            <h1>Crie e compartilhe seu evento.</h1>
+            <h1>AVALIE A SUA MENTORIA</h1>
 
-            <p>O primeiro passo, é preencher esse
-            <br />
-            formulário de inscrição.</p>
+            <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+            
+            <img src="img/img1.svg" alt="estrelas">
 
         </header>
 
         <form id="my-form">
-            
+            <div class="form-header">
+                INFORMAÇÕES PESSOAIS
+            </div>
             <fieldset>
+
                 <div class="fieldset-wrapper">
-                    <legend>Informações do evento</legend>
+                    
+
+                    <div class="duas-colunas">
+                        <div class="input-wrapper">
+                            <label for="event-nome">Nome</label>
+                            <input type="text" id="event-nome">
+                        </div>
+        
+                        <div class="input-wrapper">
+                            <label for="event-surname">Sobrenome</label>
+                            <input type="text" id="event-surname">
+                        </div>
+                    </div>
 
                 <div class="input-wrapper">
-                    <label for="event-tittle">Título do evento <span>(mínimo 8 caracteres)</span> </label>
-                    <input type="text" id="event-tittle" required minlength="8">
+                    <label for="event-email">Email<span> (digite um email válido)</span> </label>
+                    <input type="email" id="event-email">
                 </div>
 
-                <div class="input-wrapper">
-                    <label for="event-link">Link do evento <span>(comece com htpps://)</span> </label>
-                    <input type="url" id="event-link">
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="event-whastapp">Whatsapp para contato <span>(somente números)</span> </label>
-                    <input type="number" id="event-whastapp">
-                </div>
-
-                <div class="input-wrapper">
+                <!--<div class="input-wrapper">
                     <label for="event-infor">Informações extras</label>
                     <textarea id="event-info"></textarea>
                 </div>
@@ -57,43 +64,43 @@
                         <option value="podcast">Podcast</option>
                         <option value="mentorship">Mentoria</option>
                     </select>
-                </div>
+                </div>-->
                 </div>
                 
 
-            </fieldset>
-
-            <fieldset>
+                </fieldset> 
+            
+                <fieldset>
                 <div class="fieldset-wrapper">
-                    <legend>Privacidade</legend>
+                    <legend>INFORMAÇÕES DO MENTOR</legend>
 
                     <div class="input-wrapper">
-                        <label for="event-email">E-mail do administrador<span> (digite um e-mail válido)</span> </label>
-                        <input type="email" id="event-email">
+                        <label for="event-mentor">Selecione quem foi o seu mentor</span> </label>
+                        <input type="text" id="event-mentor" class="select">
                     </div>
 
                     <div class="input-wrapper">
-                        <label for="event-password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span> </label>
-                        <input type="password" id="event-password" required minlength="8">
+                        <label for="event-feedback">Feedback sobre o mentor</label>
+                        <textarea id="event-feedback"></textarea>
                     </div>
 
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="event-private">
-                        <label for="event-private">Evento privado </label>
+                        <input type="checkbox" id="event-esclarecimento">
+                        <label for="event-esclarecimento">Todas as minhas dúvidas foram esclarecidas durante a mentoria </label>
                     </div>
                   
                 </div>   
                 
-            </fieldset>   
+                </fieldset>   
 
-            <fieldset>
+                <fieldset>
                 <div class="fieldset-wrapper">
-                    <legend>Dia e hora</legend>
+                    <legend>AGENDANDO PRÓXIMA MENTORIA</legend>
 
                     <div class="col-3">
                         <div class="input-wrapper">
-                            <label for="event-date">Data </label>
-                            <input type="date" id="event-date">
+                            <label for="event-date">Data <span> (DD/MM/AAAA)</span> </label>
+                            <input class="date" type="date" id="event-date">
                         </div>
     
                         <div class="input-wrapper">
@@ -109,11 +116,11 @@
 
                     
                 </div>   
-            </fieldset>  
+             </fieldset>  
 
         </form>
         <footer>
-            <input  class="button" type="submit" form="my-form" value="Salvar evento">
+            <input  class="button" type="submit" form="my-form" value="Salvar">
         </footer>
     </div>
 </body>
